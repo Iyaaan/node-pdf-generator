@@ -7,7 +7,7 @@ app.get('/pdf', async (req, res) => {
     try {
         console.log(req.query.url)
         const browser = await puppeteer.launch({
-            headless:false,
+            headless: true,
             args: ["--no-sandbox"]
         });
         const page = await browser.newPage();
